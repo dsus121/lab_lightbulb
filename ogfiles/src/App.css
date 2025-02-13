@@ -1,0 +1,58 @@
+div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  margin: 20px;
+  height: 300px;
+  width: 200px;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.switch-button {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: all 0.3s ease;
+}
+
+.switch.dark {
+  background-color: #444;
+}
+
+.switch-button.dark {
+  left: 32.5px; 
+  background-color: #fff;
+}
