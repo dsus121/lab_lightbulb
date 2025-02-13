@@ -1,3 +1,15 @@
+/* global  */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  /* got help from the robots for the transitions for sure */
+}
+
 div {
   display: flex;
   flex-direction: column;
@@ -8,29 +20,36 @@ div {
   width: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
 img {
   margin: 20px;
   height: 300px;
   width: 200px;
+  transition: filter 0.3s ease;
 }
 
+/* room  */
+.room {
+  text-align: center;
+  padding: 20px;
+}
+
+.room.dark {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.room.dark img {
+  filter: brightness(0.3);
+}
+
+/* switch  */
 .switch {
   position: absolute;
   top: 0;
   right: 0;
   width: 60px;
   height: 30px;
-  background-color: #ccc;
+  background-color: grey;
   border-radius: 30px;
   position: relative;
   cursor: pointer;
@@ -41,7 +60,7 @@ img {
 .switch-button {
   width: 25px;
   height: 25px;
-  background-color: #fff;
+  background-color: whitesmoke;
   border-radius: 50%;
   position: absolute;
   top: 2.5px;
@@ -55,14 +74,35 @@ img {
 
 .dark .switch-button {
   left: 32.5px; 
-  background-color: #fff;
+  background-color: whitesmoke;
 }
 
-.room.dark {
-  background-color: #000;
-  color: #fff;
+/* brightness slider */
+.brightness-slider {
+  margin-top: 20px;
+  width: 200px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: lightgrey;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }
 
-img.dark {
-  filter: brightness(0.3);
+
+.brightness-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #444;
+  border-radius: 50%;
+}
+
+.brightness-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #444;
+  border-radius: 50%;
 }
